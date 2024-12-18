@@ -15,9 +15,9 @@ x86/
 *.obj
 *.pdb
 *.ilk
-*.exe
-*.dll
-*.lib
+#*.exe
+#*.dll
+#*.lib
 
 # Temporary files
 *.tlog

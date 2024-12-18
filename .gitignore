@@ -32,8 +32,8 @@ ipch/
 *.idb
 
 # Build Results
-[Bb]in/
+#[Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-/Engine/dependencies/bin/Glad
+#/Engine/dependencies/bin/Glad

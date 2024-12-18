@@ -9,15 +9,15 @@
 # Build outputs
 Debug/
 Release/
-x64/
-x86/
+#x64/
+#x86/
 *.o
 *.obj
 #*.pdb
 #*.ilk
-*.exe
-*.dll
-*.lib
+#*.exe
+#*.dll
+#*.lib
 
 # Temporary files
 *.tlog

@@ -3,6 +3,9 @@
 *.vcxproj.user
 *.suo
 
+#Ignore CLion specific files
+.idea/
+
 # Build outputs
 Debug/
 Release/
@@ -29,8 +32,8 @@ ipch/
 *.idb
 
 # Build Results
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
-/Engine/dependencies/bin/Glad
+#[Bb]in/
+#[Oo]bj/
+#[Ll]og/
+#[Ll]ogs/
+#/Engine/dependencies/bin/Glad

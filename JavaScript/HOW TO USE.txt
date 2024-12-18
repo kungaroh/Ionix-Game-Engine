@@ -1,0 +1,19 @@
+
+HOW TO INSTALL & USE:
+
+A. Find the extensions folder
+
+	Through Tiled:
+	1. Run the Tiled Editor
+	2. Navigate to Edit -> Preferences
+	3. In Preferences, Navigate to Plugins & Open the Extensions Directory (bottom right button)
+
+	Manually:
+	1. Navigate to your ../UserName/AppData/Local/Tiled/extensions
+
+
+B. Copy the 'PlayButton.js' file from the JavaScript folder
+
+C. Run Tiled (If tiled is running already, it will automatically update itself.)
+
+D. Functions can be found under the Map dropdown menu in the top left, when a tilemap file is open.

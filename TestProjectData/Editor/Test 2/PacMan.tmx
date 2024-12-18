@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="2024.10.31" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="66">
+ <editorsettings>
+  <export target="GameEngineTileMap.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="walls.tsx"/>
+ <layer id="2" name="LayerBackground" width="30" height="30">
+  <data encoding="csv">
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+</data>
+ </layer>
+ <layer id="1" name="LayerStatic" width="30" height="30">
+  <data encoding="csv">
+4,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,5,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,1,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,0,0,1,2,2,2,2,3,0,0,6,
+8,0,0,11,12,12,12,12,12,13,0,0,11,12,12,12,12,12,13,0,0,11,12,12,12,12,13,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,1,2,2,2,3,0,0,1,2,2,3,0,0,1,2,2,3,0,0,1,2,2,2,3,0,0,6,
+8,0,0,11,12,12,5,8,0,0,11,12,12,13,0,0,11,12,12,13,0,0,6,4,12,12,13,0,0,6,
+8,0,0,0,0,0,6,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,8,0,0,0,0,0,6,
+8,0,0,0,0,0,6,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,8,0,0,0,0,0,6,
+9,2,2,3,0,0,6,8,0,0,1,2,2,2,2,2,2,2,2,3,0,0,6,8,0,0,1,2,2,10,
+0,0,0,0,0,0,0,8,0,0,6,14,14,14,14,14,14,15,14,8,0,0,6,8,0,0,6,14,14,15,
+0,0,0,0,0,0,0,13,0,0,6,14,14,14,14,14,14,15,14,8,0,0,11,13,0,0,11,12,12,12,
+0,0,0,0,0,0,0,0,0,0,6,14,14,14,14,14,14,14,15,8,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,6,14,14,14,14,14,14,14,15,8,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,3,0,0,6,14,14,14,14,14,14,14,14,8,0,0,1,3,0,0,1,2,2,2,
+0,0,0,0,0,0,0,8,0,0,11,12,12,12,12,12,12,12,12,13,0,0,6,8,0,0,6,14,14,14,
+4,12,12,13,0,0,6,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,8,0,0,11,12,12,5,
+8,0,0,0,0,0,6,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,8,0,0,0,0,0,6,
+8,0,0,0,0,0,6,8,0,0,1,2,2,3,0,0,1,2,2,3,0,0,6,8,0,0,0,0,0,6,
+8,0,0,1,2,2,10,8,0,0,6,14,14,8,0,0,6,14,14,8,0,0,6,9,2,2,3,0,0,6,
+8,0,0,11,12,12,12,13,0,0,11,12,12,13,0,0,11,12,12,13,0,0,11,12,12,12,13,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,1,2,2,2,2,2,2,3,0,0,1,2,2,3,0,0,1,2,2,2,2,2,2,3,0,0,6,
+8,0,0,11,12,12,12,12,12,12,13,0,0,11,12,12,13,0,0,11,12,12,12,12,12,12,13,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,
+9,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,10
+</data>
+ </layer>
+ <layer id="3" name="LayerDecoration" width="30" height="30">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="ObjectLayer">
+  <object id="40" name="desa" gid="13" x="148" y="85.3333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="43" name="desa" gid="13" x="69.3333" y="66.6667" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="44" name="desa" gid="13" x="314" y="86.6666" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="45" name="desa" gid="13" x="235.333" y="68" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="46" name="desa" gid="13" x="501.667" y="95.3333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="47" name="desa" gid="13" x="423" y="76.6667" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="48" name="desa" gid="13" x="667.667" y="96.6666" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="49" name="desa" gid="13" x="589" y="78" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="50" name="desa" gid="13" x="123" y="223.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="51" name="desa" gid="13" x="44.3332" y="204.667" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="52" name="desa" gid="13" x="289" y="224.667" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="53" name="desa" gid="13" x="210.333" y="206" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="54" name="desa" gid="13" x="428.333" y="340.666" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="55" name="desa" gid="13" x="349.667" y="322" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="56" name="desa" gid="13" x="594.333" y="342" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="57" name="desa" gid="13" x="515.666" y="323.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="58" name="desa" gid="13" x="420.333" y="633.999" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="59" name="desa" gid="13" x="341.667" y="615.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="60" name="desa" gid="13" x="586.333" y="635.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="61" name="desa" gid="13" x="507.666" y="616.666" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="62" name="desa" gid="13" x="420.333" y="805.999" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="63" name="desa" gid="13" x="341.667" y="787.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="64" name="desa" gid="13" x="586.333" y="807.333" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+  <object id="65" name="desa" gid="13" x="507.666" y="788.666" width="32" height="32">
+   <properties>
+    <property name="SpriteComponent" value="mario"/>
+    <property name="TogglePhysics" type="bool" value="false"/>
+    <property name="density" type="float" value="1"/>
+    <property name="friction" type="float" value="0.2"/>
+    <property name="isKinematic" type="bool" value="false"/>
+    <property name="isStatic" type="bool" value="false"/>
+    <property name="isTrigger" type="bool" value="false"/>
+    <property name="restitution" type="float" value="1"/>
+    <property name="tag" value="SecondName"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

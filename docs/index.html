@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects API Reference</title>
+
+    <style>
+        /* Variables for light and dark themes */
+        :root {
+            --bg-color: #ffffff; /* Light theme background */
+            --text-color: #000000; /* Light theme text */
+            --button-bg: #f1f1f1; /* Light button background */
+            --button-hover: #ddd;
+            --content-bg: #f9f9f9; /* Light content background */
+            --border-color: #ddd;
+            --code-bg: #f4f4f4; /* Light code box background */
+            --code-border: #ccc;
+        }
+
+        /* Dark theme vars */
+        [data-theme="dark"] {
+            --bg-color: #121212; /* Dark background */
+            --text-color: #ffffff; /* Dark text */
+            --button-bg: #333333; /* Dark button background */
+            --button-hover: #444444;
+            --content-bg: #1e1e1e; /* Dark content background */
+            --border-color: #555555;
+            --code-bg: #1e1e1e; /* Dark code box background */
+            --code-border: #444444;
+        }
+
+        /* Global styles */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .collapsible {
+            background-color: var(--button-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .collapsible:hover {
+            background-color: var(--button-hover);
+        }
+
+        .content {
+            padding: 0 20px;
+            display: none;
+            overflow: hidden;
+            background-color: var(--content-bg);
+            border-left: 2px solid var(--border-color);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* Code box styles */
+        .code-box {
+            background-color: var(--code-bg);
+            border: 1px solid var(--code-border);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* Theme togggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--button-bg);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--button-hover);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">Switch to Dark Theme</button>
+
+    <h1>Ionix API Reference</h1>
+
+<!-- Editor Properties Section -->
+    <button class="collapsible">Editor Properties</button>
+    <div class="content">
+		<p>All objects on ObjectLayer have a physics component.<br>
+		This component can be controlled via properties in edior:</p>
+		
+		<button class="collapsible">TogglePhysicsOff</button>
+		<div class="content">
+			<div class="code-box">
+				<code>bool: TogglePhysicsOff</code>
+			</div>
+			<p>If True, stops the above physics component being added to the object.</p>
+		</div>
+		
+		<button class="collapsible">isTrigger</button>
+		<div class="content">
+			<div class="code-box">
+				<code>bool: isTrigger</code>
+			</div>
+			<p>True or False to state if trigger or not.</p>
+		</div>
+		
+		<button class="collapsible">isStatic</button>
+		<div class="content">
+			<div class="code-box">
+				<code>bool: isStatic</code>
+			</div>
+			<p>Is the object static or not.</p>
+		</div>
+		
+		<button class="collapsible">isKinematic</button>
+		<div class="content">
+			<div class="code-box">
+				<code>bool: isKinematic</code>
+			</div>
+			<p>Kinematic or not.</p>
+		</div>
+		
+		<button class="collapsible">LockRotation</button>
+		<div class="content">
+			<div class="code-box">
+				<code>bool: LockRotation</code>
+			</div>
+			<p>If True, stops the physics component from rotating.</p>
+		</div>
+		
+		<button class="collapsible">Density</button>
+		<div class="content">
+			<div class="code-box">
+				<code>float: density</code>
+			</div>
+			<p>Range between 0 and 1.</p>
+		</div>
+		
+		<button class="collapsible">Friction</button>
+		<div class="content">
+			<div class="code-box">
+				<code>float: friction</code>
+			</div>
+			<p>Range between 0 and 1.</p>
+		</div>
+		
+		<button class="collapsible">Restitution</button>
+		<div class="content">
+			<div class="code-box">
+				<code>float: restitution</code>
+			</div>
+			<p>Range between 0 and 1.</p>
+		</div>
+		
+		<button class="collapsible">ColliderWidth</button>
+		<div class="content">
+			<div class="code-box">
+				<code>float: ColliderWidth</code>
+			</div>
+			<p>Float determines the width of the collider on the object.</p>
+		</div>
+		
+		<button class="collapsible">ColliderHeight</button>
+		<div class="content">
+			<div class="code-box">
+				<code>float: ColliderHeight</code>
+			</div>
+			<p>Float determines the height of the collider on the object.</p>
+		</div>
+		
+		<button class="collapsible">Tag</button>
+		<div class="content">
+			<div class="code-box">
+				<code>string: tag</code>
+			</div>
+			<p>Give the object a tag name (access with the get_object_tag hook)</p>
+		</div>
+		
+		<button class="collapsible">ScriptComponent</button>
+		<div class="content">
+			<div class="code-box">
+				<code>string: ScriptComponent</code>
+			</div>
+			<p>Expects the name of a script, and will add this script for you.</p>
+			<p><b><i>You can have more than one script by adding more components.</i></b></p>
+		</div>
+		
+		<button class="collapsible">SpriteComponent</button>
+		<div class="content">
+			<div class="code-box">
+				<code>string: SpriteComponent</code>
+			</div>
+			<p>Manually renders a .png from "TestProjectData/textures/" to the object.</p>
+		</div>
+    </div>
+
+    <!-- Objects Section -->
+    <button class="collapsible">Objects</button>
+    <div class="content">
+		<button class="collapsible">Set Object Position</button>
+		<div class="content">
+			<div class="code-box">
+				<code>set_object_position(int uid, float xPos, float yPos)</code>
+			</div>
+			<p>Sets the position of an object using its unique ID (uid) and the specified x and y coordinates.</p>
+			<img src="Images/set_object_position.PNG" alt="Set Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+		</div>
+
+		<button class="collapsible">Get Object Position</button>
+		<div class="content">
+			<div class="code-box">
+				<code>get_object_position(int uid)</code>
+			</div>
+			<p>Returns the position of an object based on its unique ID (uid).</p>
+			<img src="Images/get_object_position.PNG" alt="Get Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+		</div>
+
+		<button class="collapsible">Set Object Rotation</button>
+		<div class="content">
+			<div class="code-box">
+				<code>set_object_rotation(int uid, float rotation)</code>
+			</div>
+			<p>Sets the rotation of an object using its unique ID (uid) and the specified rotation angle.</p>
+			<img src="Images/set_object_rotation.PNG" alt="Set Object Rotation Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+		</div>
+
+		<button class="collapsible">Get Object Rotation</button>
+		<div class="content">
+			<div class="code-box">
+				<code>get_object_rotation(int uid)</code>
+			</div>
+			<p>Returns the rotation of an object based on its unique ID (uid).</p>
+			<img src="Images/get_object_rotation.PNG" alt="Get Object Rotation Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+		</div>
+
+        <button class="collapsible">Get Object Scale</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_object_scale(int uid)</code>
+            </div>
+            <p>Gets the scale of the object</p>
+            <!--<img src="Images/set_object_position.PNG" alt="Set Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;"> -->
+        </div>
+
+        <button class="collapsible">Set Object Scale</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_object_scale(int uid, float scaleX, float scaleY)</code>
+            </div>
+            <p>Sets the scale of the object</p>
+            <!--<img src="Images/set_object_position.PNG" alt="Set Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;"> -->
+        </div>
+
+        <button class="collapsible">Get Object Tag</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_object_tag(int uid)</code>
+            </div>
+            <p>Gets the tag of the object</p>
+            <!--<img src="Images/set_object_position.PNG" alt="Set Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;"> -->
+        </div>
+
+        <button class="collapsible">Get Object Name</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_object_name(int uid)</code>
+            </div>
+            <p>Gets the name of the object</p>
+            <!--<img src="Images/set_object_position.PNG" alt="Set Object Position Example" style="max-width: 100%; height: auto; margin-top: 10px;"> -->
+        </div>
+
+        <button class="collapsible">Get UID From Name</button>
+        <div class="content">
+            <div class="code-box">
+                <code>uid_from_name(string gameObjectName)</code>
+            </div>
+            <p>Returns the unique ID (uid) of an object using its name.</p>
+        </div>
+
+        <button class="collapsible">Instantiate</button>
+        <div class="content">
+			<div class="code-box">
+				<code>instantiate(string nameOfObjToSpawn, int xPos, int yPos)</code>
+			</div>
+			<p>Uses an existing object name to create a clone at a specified position. </p>
+			<p></p>
+            <p>Object names, for now, are defined in CPP (test classes) - See QAV11_TestGame.cpp </p>
+			<p>Alternatively, you can use <strong>change_gameObject_name</strong> to modify an existing object name via script, and use that new name instead.</p>
+		</div>
+
+        <button class="collapsible">Disable Object</button>
+        <div class="content">
+            <div class="code-box">
+                <code>disable_object(int uid)</code>
+            </div>
+            <p>Disables an object using its unique ID (uid).</p>
+        </div>
+
+        <button class="collapsible">Is Object Enabled</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_enabled(int uid)</code>
+            </div>
+            <p>Checks whether an object is enable using the it's unique ID (uid). <br> Returns bool.</p>
+        </div>
+
+        <button class="collapsible">Enable Object</button>
+        <div class="content">
+            <div class="code-box">
+                <code>enable_object(int uid)</code>
+            </div>
+            <p>Enables an object using its unique ID (uid).</p>
+        </div>
+
+        <button class="collapsible">Remove Object</button>
+        <div class="content">
+            <div class="code-box">
+                <code>remove_object(int uid)</code>
+            </div>
+            <p>Removes an object from the scene using its unique ID (uid).</p>
+        </div>
+
+        <button class="collapsible">Change GameObject Name</button>
+        <div class="content">
+            <div class="code-box">
+                <code>change_gameObject_name(int uid, string newName)</code>
+            </div>
+            <p>Changes the name of an object using its unique ID (uid).</p>
+        </div>
+
+    </div>
+	
+	    <!-- Input Section -->
+    <button class="collapsible">Input</button>
+    <div class="content">
+
+        <!-- Codes -->
+        <button class="collapsible">Codes</button>
+        <div class="content">
+            <button class="collapsible">Ionix Mouse Codes</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>
+                        Ionix_LeftClick<br>
+                        Ionix_RightClick<br>
+                        Ionix_MiddleClick
+                    </code>
+                </div>
+                <p>Mouse codes to use for specific mouse actions such as left-click, right-click, and middle-click.</p>
+            </div>
+
+            <button class="collapsible">Ionix Key Codes</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>
+                        Ionix_A<br>
+                        Ionix_B<br>
+                        Ionix_C<br>
+                        Ionix_D<br>
+                        Ionix_Space<br>
+                        Ionix_Return<br>
+                        Ionix_Escape<br>
+                        Ionix_Up<br>
+                        Ionix_Down<br>
+                        Ionix_Left<br>
+                        Ionix_Right<br>
+                        Ionix_LeftShift<br>
+                        Ionix_RightShift<br>
+                        Ionix_LeftControl<br>
+                        Ionix_RightControl<br>
+                        Ionix_LeftAlt<br>
+                        Ionix_RightAlt<br>
+						Ionix_CapsLock<br>
+                        Ionix_E<br>
+                        Ionix_F<br>
+                        Ionix_G<br>
+                        Ionix_H<br>
+                        Ionix_I<br>
+                        Ionix_J<br>
+                        Ionix_K<br>
+                        Ionix_L<br>
+                        Ionix_M<br>
+                        Ionix_N<br>
+                        Ionix_O<br>
+                        Ionix_P<br>
+                        Ionix_Q<br>
+                        Ionix_R<br>
+                        Ionix_S<br>
+                        Ionix_T<br>
+                        Ionix_U<br>
+                        Ionix_V<br>
+                        Ionix_W<br>
+                        Ionix_X<br>
+                        Ionix_Y<br>
+                        Ionix_Z<br>
+                        Ionix_0<br>
+                        Ionix_1<br>
+                        Ionix_2<br>
+                        Ionix_3<br>
+                        Ionix_4<br>
+                        Ionix_5<br>
+                        Ionix_6<br>
+                        Ionix_7<br>
+                        Ionix_8<br>
+                        Ionix_9<br>	
+                    </code>
+                </div>
+                <p>Key codes to reference keyboard actions for letters, arrows, and special keys like Shift, Control, and Alt.</p>
+            </div>
+        </div>
+
+        <!-- Mouse Position -->
+        <button class="collapsible">Mouse Position</button>
+        <div class="content">
+            <button class="collapsible">Get Mouse X Position</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>get_mouse_x_position()</code>
+                </div>
+                <p>Returns the current X position of the mouse in screen coordinates.</p>
+            </div>
+
+            <button class="collapsible">Get Mouse Y Position</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>get_mouse_y_position()</code>
+                </div>
+                <p>Returns the current Y position of the mouse in screen coordinates.</p>
+            </div>
+        </div>
+
+        <!-- Mouse Button States -->
+        <button class="collapsible">Is Mouse Button Pressed</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_mouse_down(Ionix_LeftClick)</code>
+            </div>
+            <p>Checks if the specified mouse button (e.g., <code>Ionix_LeftClick</code>) is currently pressed.</p>
+			<img src="Images/is_mouse_down.PNG" alt="Is Mouse Down Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Is Mouse Button Held</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_mouse_held(Ionix_RightClick)</code>
+            </div>
+            <p>Checks if the specified mouse button (e.g., <code>Ionix_RightClick</code>) is being held down.</p>
+			<img src="Images/is_mouse_held.PNG" alt="Is Mouse Held Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Is Mouse Button Up</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_mouse_up(Ionix_MiddleClick)</code>
+            </div>
+            <p>Checks if the specified mouse button (e.g., <code>Ionix_MiddleClick</code>) was released.</p>
+			<img src="Images/is_mouse_up.PNG" alt="Is Mouse Up Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <!-- Keyboard States -->
+        <button class="collapsible">Is Key Down</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_key_down(Ionix_Space)</code>
+            </div>
+            <p>Checks if the specified key (e.g., <code>Ionix_Space</code>) is currently pressed.</p>
+			<img src="Images/IsKeyDown.PNG" alt="Is Key Down Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Is Key Held</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_key_held(Ionix_LeftShift)</code>
+            </div>
+            <p>Checks if the specified key (e.g., <code>Ionix_LeftShift</code>) is being held down.</p>
+			<img src="Images/is_key_held.PNG" alt="Is Key Held Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Is Key Up</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_key_up(Ionix_Return)</code>
+            </div>
+            <p>Checks if the specified key (e.g., <code>Ionix_Return</code>) was released.</p>
+			<img src="Images/is_key_up.PNG" alt="Is Key Up Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+    </div>
+
+    <!-- Maths Section -->
+	<button class="collapsible">Maths</button>
+	<div class="content">
+
+    <button class="collapsible">Round to Int</button>
+    <div class="content">
+        <div class="code-box">
+            <code>RoundToInt(float number)</code>
+        </div>
+        <p>Rounds a number to the nearest integer. If the fractional part is 0.5 or greater, rounds up.</p>
+        <img src="Images/RoundToInt.PNG" alt="Round to Int Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Floor to Int</button>
+    <div class="content">
+        <div class="code-box">
+            <code>FloorToInt(float number)</code>
+        </div>
+        <p>Returns the largest integer less than or equal to the specified number.</p>
+        <img src="Images/FloorToInt.PNG" alt="Floor to Int Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Ceil to Int</button>
+    <div class="content">
+        <div class="code-box">
+            <code>CeilToInt(float number)</code>
+        </div>
+        <p>Returns the smallest integer greater than or equal to the specified number.</p>
+        <img src="Images/CeilToInt.PNG" alt="Ceil to Int Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Power Of</button>
+    <div class="content">
+        <div class="code-box">
+            <code>PowerOf(float base, float exponent)</code>
+        </div>
+        <p>Calculates the value of a base raised to a specified exponent.</p>
+        <img src="Images/PowerOf.PNG" alt="Power Of Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Absolute Value</button>
+    <div class="content">
+        <div class="code-box">
+            <code>AbsValue(float number)</code>
+        </div>
+        <p>Returns the absolute value of a number.</p>
+        <img src="Images/Absolute.PNG" alt="Absolute Value Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Radians to Degrees</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Rad2Deg(float radians)</code>
+        </div>
+        <p>Converts radians to degrees.</p>
+        <img src="Images/RadToDeg.PNG" alt="Radians to Degrees Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Degrees to Radians</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Deg2Rad(float degrees)</code>
+        </div>
+        <p>Converts degrees to radians.</p>
+        <img src="Images/DegToRad.PNG" alt="Degrees to Radians Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Clamp</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Clamp(float value, float min, float max)</code>
+        </div>
+        <p>Restricts a value to be within a specified range.</p>
+        <img src="Images/Clamp.PNG" alt="Clamp Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Normalize</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Normalize(float x, float y)</code>
+        </div>
+        <p>Normalizes a 2D vector (x, y), returning its components as unit values.</p>
+        <img src="Images/Normalize.PNG" alt="Normalize Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Magnitude</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Magnitude(float x, float y)</code>
+        </div>
+        <p>Calculates the magnitude (length) of a 2D vector (x, y).</p>
+        <img src="Images/Magnitude.PNG" alt="Magnitude Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Random Range (Int)</button>
+    <div class="content">
+        <div class="code-box">
+            <code>RandomRangeInt(int min, int max [, int seed])</code>
+        </div>
+        <p>Returns a random integer between <code>min</code> and <code>max</code>. An optional <code>seed</code> parameter can be provided.</p>
+        <img src="Images/RandomInt.PNG" alt="Random Range Int Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Random Range (Float)</button>
+    <div class="content">
+        <div class="code-box">
+            <code>RandomRangeFloat(float min, float max [, int seed])</code>
+        </div>
+        <p>Returns a random floating-point number between <code>min</code> and <code>max</code>. An optional <code>seed</code> parameter can be provided.</p>
+        <img src="Images/RandomFloat.PNG" alt="Random Range Float Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Perlin Noise</button>
+    <div class="content">
+        <div class="code-box">
+            <code>PerlinNoise(float x, float y [, float cellSize])</code>
+        </div>
+        <p>Generates a Perlin noise value for the specified coordinates. An optional <code>cellSize</code> can be provided to scale the noise.</p>
+        <img src="Images/Perlin.PNG" alt="Perlin Noise Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Linear Interpolation</button>
+    <div class="content">
+        <div class="code-box">
+            <code>Interpolate(float t, float start, float end)</code>
+        </div>
+        <p>Linearly interpolates between <code>start</code> and <code>end</code> based on the parameter <code>t</code>.</p>
+        <img src="Images/Lerp.PNG" alt="Linear Interpolation Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Bilinear Interpolation</button>
+    <div class="content">
+        <div class="code-box">
+            <code>BillinearInterpolate(float x, float y, float BL, float BR, float TL, float TR)</code>
+        </div>
+        <p>Performs bilinear interpolation based on the specified corner values and the parameters <code>x</code> and <code>y</code>.</p>
+        <img src="Images/Bilerp.PNG" alt="Bilinear Interpolation Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+    </div>
+
+    <button class="collapsible">Vector2</button>
+    <div class="content">
+        <button class="collapsible">Create Vector2</button>
+        <div class="content">
+            <div class="code-box">
+                <code>newVector2(float x, float y)</code>
+            </div>
+            <p>Creates a new 2D vector with the specified <code>x</code> and <code>y</code> components.</p>
+            <img src="Images/newVector2.PNG" alt="Create Vector2 Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Vector2 Addition</button>
+        <div class="content">
+            <div class="code-box">
+                <code>vec1.add(vec2)</code>
+            </div>
+            <p>Adds the components of <code>vec2</code> to <code>vec1</code>.</p>
+            <img src="Images/Add.PNG" alt="Vector2 Addition Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Vector2 Subtraction</button>
+        <div class="content">
+            <div class="code-box">
+                <code>vec1.Sub(vec2)</code>
+            </div>
+            <p>Subtracts the components of <code>vec2</code> from <code>vec1</code>.</p>
+            <img src="Images/Sub.PNG" alt="Vector2 Subtraction Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Vector2 Multiplication</button>
+        <div class="content">
+            <div class="code-box">
+                <code>vec1.Mult(float scalar)</code>
+            </div>
+            <p>Multiplies the components of <code>vec1</code> by a scalar or by the components of another vector.</p>
+            <img src="Images/Multi.PNG" alt="Vector2 Multiplication Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Vector2 Division</button>
+        <div class="content">
+            <div class="code-box">
+                <code>vec1.Div(float scalar)</code>
+            </div>
+            <p>Divides the components of <code>vec1</code> by a scalar or by the components of another vector.</p>
+            <img src="Images/Div.png" alt="Vector2 Division Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+    </div>
+
+	</div>	
+
+    <!-- Physics Section -->
+    <button class="collapsible">Physics</button>
+    <div class="content">
+
+        <button class="collapsible">Set Gravity Scale</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_gravity_scale(int uid, float gravityScale)</code>
+            </div>
+            <p>Sets the gravity scale for an object specified by its unique identifier (<code>uid</code>).</p>
+        </div>
+
+        <button class="collapsible">Add Force</button>
+        <div class="content">
+            <div class="code-box">
+                <code>add_force(int uid, float forceX, float forceY, float forcePosX, float forcePosY)</code>
+            </div>
+            <p>Adds a force to an object. The force is applied at a specific position (<code>forcePosX</code>, <code>forcePosY</code>).</p>
+        </div>
+
+        <button class="collapsible">Add Box Collider</button>
+        <div class="content">
+            <div class="code-box">
+                <code>add_box_collider(int uid, float posX, float posY, float width, float height, bool isTrigger)</code>
+            </div>
+            <p>Adds a box collider to an object. Specify the position, size, and whether it is a trigger.</p>
+        </div>
+
+        <button class="collapsible">Add Circle Collider</button>
+        <div class="content">
+            <div class="code-box">
+                <code>add_circle_collider(int uid, float posX, float posY, float radius, bool isTrigger)</code>
+            </div>
+            <p>Adds a circle collider to an object. Specify the position, radius, and whether it is a trigger.</p>
+        </div>
+
+        <button class="collapsible">Remove Collider</button>
+        <div class="content">
+            <div class="code-box">
+                <code>remove_collider(int uid, int colliderID)</code>
+            </div>
+            <p>Removes a collider from an object using its unique identifier (<code>uid</code>) and the collider ID.</p>
+        </div>
+
+        <button class="collapsible">Get Velocity</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_velocity(int uid)</code>
+            </div>
+            <p>Gets velocity of the physics body attached to the object at (<code>uid</code>). Returns x, y components in world units (pixels/second)</p>
+        </div>
+
+        <button class="collapsible">Set Velocity</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_velocity(int uid, float xvel, float yvel)</code>
+            </div>
+            <p>Sets the velocity of the physics body attached to the object at (<code>uid</code>) to <code>(xvel, yvel)</code> in world units (pixels/second)</p>
+        </div>
+
+
+
+        <button class="collapsible">Raycasting</button>
+        <div class="content">
+
+            <button class="collapsible">Raycast</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>raycast(int uid, int startX, int startY, int dirX, int dirY, float length)</code>
+                </div>
+                <p>Performs a raycast starting at (<code>startX</code>, <code>startY</code>) in a direction (<code>dirX</code>, <code>dirY</code>) for a specified length.</p>
+            </div>
+
+            <button class="collapsible">Raycast Hit</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>raycast_hit(int uid, int startX, int startY, int dirX, int dirY, float length)</code>
+                </div>
+                <p>Checks if the raycast intersects any objects in the specified direction and length.</p>
+            </div>
+
+            <button class="collapsible">First Raycast Hit</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>first_raycast_hit(int uid, int startX, int startY, int dirX, int dirY, float length)</code>
+                </div>
+                <p>Finds the first object hit by the raycast along the specified direction and length.</p>
+            </div>
+
+            <button class="collapsible">Box Cast</button>
+            <div class="content">
+                <div class="code-box">
+                    <code>box_cast(int uid, int x, int y, int x2, int y2)</code>
+                </div>
+                <p>Performs a box cast to detect collisions within a rectangular area defined by (<code>x</code>, <code>y</code>) to (<code>x2</code>, <code>y2</code>).</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- UI Section -->
+    <button class="collapsible">UI</button>
+    <div class="content">
+
+        <button class="collapsible">Add Label</button>
+        <div class="content">
+            <div class="code-box">
+                <code>add_label(string text, int x, int y, int givenID, int groupID)</code>
+            </div>
+            <p>Adds a text label to the UI at the specified position (<code>x</code>, <code>y</code>). The label is assigned a unique identifier (<code>givenID</code>) and grouped under <code>groupID</code>.</p>
+			<img src="Images/AddLabel.PNG" alt="Add Label Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Add Button</button>
+        <div class="content">
+            <div class="code-box">
+                <code>add_button(string text, int x, int y, int sizeX, int sizeY, int givenID, int groupID)</code>
+            </div>
+            <p>Adds a button to the UI with the specified dimensions (<code>sizeX</code>, <code>sizeY</code>) and position (<code>x</code>, <code>y</code>). The button is assigned a unique identifier (<code>givenID</code>) and grouped under <code>groupID</code>.</p>
+			<img src="Images/AddButton.PNG" alt="Add Button Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Is Button Pressed</button>
+        <div class="content">
+            <div class="code-box">
+                <code>is_button_pressed(int id)</code>
+            </div>
+            <p>Checks if a button with the specified identifier (<code>id</code>) has been pressed. Returns <code>true</code> if pressed, otherwise <code>false</code>.</p>
+			<img src="Images/is_button_pressed.PNG" alt="Is Button Pressed Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">Set Group Position</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_group_position(int groupID, int x, int y)</code>
+            </div>
+            <p>Sets the position of a UI group identified by <code>groupID</code> to the new coordinates (<code>x</code>, <code>y</code>).</p>
+			<img src="Images/SetGroupPosition.PNG" alt="Set Group Position Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+		
+		<button class="collapsible">Set UI Active</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_active(int elementID, bool state)</code>
+            </div>
+            <p>Sets the enabled state of a UI element identified by <code>elementID</code> to the new state (true/false) <code>state</code>).</p>
+			<img src="Images/set_active.PNG" alt="Set UI Element Active State Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+		
+		<button class="collapsible">Update UI Text</button>
+        <div class="content">
+            <div class="code-box">
+                <code>update_ui_text(int elementID, string text)</code>
+            </div>
+            <p>Updates the text of a UI element identified by <code>elementID</code> to the new text <code>text</code>).</p>
+            <p>Ideal for use with score systems, where the UI changes frequently.</p>
+			<img src="Images/update_ui_text.PNG" alt="Update UI Element Text Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>		
+    </div>
+
+    <!-- Audio Section -->
+    <button class="collapsible">Audio</button>
+    <div class="content">
+
+        <button class="collapsible">Play Audio</button>
+        <div class="content">
+            <div class="code-box">
+                <code>play_audio(string fileLocation, int loops)</code>
+            </div>
+            <p>Plays an audio file from the specified <code>fileLocation</code>. The <code>loops</code> parameter specifies how many times the audio should loop (-1 for infinite).</p>
+        </div>
+
+        <button class="collapsible">Pause Audio</button>
+        <div class="content">
+            <div class="code-box">
+                <code>pause_audio(int handle)</code>
+            </div>
+            <p>Pauses the audio currently playing with the specified <code>handle</code>.</p>
+        </div>
+
+        <button class="collapsible">Pause All Audio</button>
+        <div class="content">
+            <div class="code-box">
+                <code>PauseAllAudio(int handle)</code>
+            </div>
+            <p>Pauses all audio currently playing.</p>
+        </div>
+
+        <button class="collapsible">Resume Audio</button>
+        <div class="content">
+            <div class="code-box">
+                <code>resume_audio(int handle)</code>
+            </div>
+            <p>Resumes the paused audio associated with the specified <code>handle</code>.</p>
+        </div>
+
+        <button class="collapsible">Fade In</button>
+        <div class="content">
+            <div class="code-box">
+                <code>fade_in(int ms, string fileLocation, int loops)</code>
+            </div>
+            <p>Plays an audio file with a fade-in effect over the specified duration in milliseconds (<code>ms</code>).</p>
+        </div>
+
+        <button class="collapsible">Fade Out</button>
+        <div class="content">
+            <div class="code-box">
+                <code>fade_out(int ms, int handle)</code>
+            </div>
+            <p>Fades out the audio associated with the specified <code>handle</code> over the specified duration in milliseconds (<code>ms</code>).</p>
+        </div>
+
+        <button class="collapsible">Set Volume</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_volume(int volume, int handle)</code>
+            </div>
+            <p>Sets the volume of the audio associated with the specified <code>handle</code>. The <code>volume</code> is typically between 0 and 128.</p>
+        </div>
+
+        <button class="collapsible">Timed Play</button>
+        <div class="content">
+            <div class="code-box">
+                <code>timed_play(int handle, float interval)</code>
+            </div>
+            <p>Plays the audio associated with the specified <code>handle</code> at a regular interval specified by <code>interval</code>.</p>
+        </div>
+
+        <button class="collapsible">Random Timed Play</button>
+        <div class="content">
+            <div class="code-box">
+                <code>random_timed_play(int handle, float min, float max)</code>
+            </div>
+            <p>Plays the audio associated with the specified <code>handle</code> at random intervals between <code>min</code> and <code>max</code> seconds.</p>
+        </div>
+
+        <button class="collapsible">Clear Channel</button>
+        <div class="content">
+            <div class="code-box">
+                <code>ClearChannel(int handle)</code>
+            </div>
+            <p>Clears the audio channel with the specified <code>handle</code>.</p>
+        </div>
+
+        <button class="collapsible">Clear All Channels</button>
+        <div class="content">
+            <div class="code-box">
+                <code>ClearAllChannel()</code>
+            </div>
+            <p>Clears all audio channels.</p>
+        </div>
+
+    </div>
+
+
+    <!-- Graphics Section -->
+    <button class="collapsible">Graphics</button>
+    <div class="content">
+
+        <button class="collapsible">Get Window Dimensions</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_window_dimensions()</code>
+            </div>
+            <p>Returns the width and height of the window.</p>
+        </div>
+
+        <button class="collapsible">Get Camera Position</button>
+        <div class="content">
+            <div class="code-box">
+                <code>get_camera_pos()</code>
+            </div>
+            <p>Returns the x and y coordinates of the camera. Note that a 'camera' is the coordinates of the top left corner of the screen in world coordinates, not the centre of the screen</p>
+        </div>
+
+        <button class="collapsible">Set Camera Position</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_camera_pos( x, y )</code>
+            </div>
+            <p>Sets the x and y coordinates of the camera. Note that a 'camera' is the coordinates of the top left corner of the screen in world coordinates, not the centre of the screen</p>
+        </div>
+
+        <button class="collapsible">Set Texture</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_texture( objUID, textureName )</code>
+            </div>
+            <p>Sets the texture on the sprite component (if any) atttached to the object at <code>objUID</code>. <code>textureName</code> is the name of the texture file.</p>
+        </div>
+
+        <button class="collapsible">Set Animation Parameters</button>
+        <div class="content">
+            <div class="code-box">
+                <code>set_animation_params( objUID, num_rows, num_frames, cur_row, speed_fps )</code>
+            </div>
+            <p>Sets an animation on the sprite component (if any) attached to the object at <code>objUID</code>. Animations are assumed to be made of square tiles in a texture, and a single animation mode 
+                must occupy a horizontal row in the texture. <code>num_rows</code> is the number of rows in the texture, <code>cur_row</code> is the row you want to play, <code>num_frames</code> is the number 
+                of tiles in the row to loop over, and <code>speed_fps</code> is the speed of the animation in frames per second</p>
+        </div>
+    </div>
+
+
+    <!-- Scripting Section -->
+    <button class="collapsible">Scripting</button>
+    <div class="content">
+
+        <button class="collapsible">Log</button>
+        <div class="content">
+            <div class="code-box">
+                <code>log(string input)</code>
+            </div>
+            <p>Writes the specified input to the console.</p>
+        </div>
+        
+        <button class="collapsible">Log Error</button>
+        <div class="content">
+            <div class="code-box">
+                <code>log_error(string input)</code>
+            </div>
+            <p>Writes the specified input to the console in red.</p>
+        </div>
+
+        <button class="collapsible">Log Warnimg</button>
+        <div class="content">
+            <div class="code-box">
+                <code>log_warning(string input)</code>
+            </div>
+            <p>Writes the specified input to the console in yellow.</p>
+        </div>
+
+        <button class="collapsible">CreateCoroutine</button>
+        <div class="content">
+            <div class="code-box">
+                <code>CreateCoroutine( function_name, argument )</code>
+            </div>
+            <p>Creates a coroutine with the named function and argument. If the function is a member function of the object, the argument should be <code>self</code>. See the example.</p>
+            <img src="Images/CreateCoroutine.png" alt="CreateCoroutine Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+
+        <button class="collapsible">YieldNextUpdate()</button>
+        <div class="content">
+            <div class="code-box">
+                <code>YieldNextUpdate()</code>
+            </div>
+            <p>Called within a coroutine, this pauses execution until the next game loop update</p>
+        </div>
+    
+        <button class="collapsible">YieldWaitForSeconds</button>
+        <div class="content">
+            <div class="code-box">
+                <code>YieldWaitForSeconds( seconds )</code>
+            </div>
+            <p>Called within a coroutine, this pauses execution for a time in seconds equal to the argument <code>seconds</code>.</p>
+        </div>
+
+        <button class="collapsible">Call Function</button>
+        <div class="content">
+            <div class="code-box">
+                <code>call_function( script_name, function_name, uid )</code>
+            </div>
+            <p>This is used to call functions in other script components (on other objects, or even the same object). <code>script_name</code> is the name of the script, <code>function_name</code> is the name 
+                of the function to call, and <code>uid</code> is the uid of the object owning the script component. Note that this only supports calling procedures with no arguments (so, no inputs or outputs)</p>
+            <img src="Images/callfunction.png" alt="call_function Example" style="max-width: 100%; height: auto; margin-top: 10px;">
+        </div>
+    </div>
+
+    <script>
+        // JS for collapsible sections
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(button => {
+            button.addEventListener("click", () => {
+                button.classList.toggle("active");
+                const content = button.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+		// Dark/light mode
+		const themeToggle = document.getElementById("themeToggle");
+		const body = document.body;
+
+		// Set initial theme to dark and update button text
+		body.setAttribute("data-theme", "dark");
+		themeToggle.textContent = 'Switch to Light Theme';
+
+		themeToggle.addEventListener("click", () => {
+			// Toggle the dark theme
+			if (body.getAttribute("data-theme") === "dark") {
+				body.setAttribute("data-theme", "light");
+				themeToggle.textContent = 'Switch to Dark Theme';
+			} else {
+				body.setAttribute("data-theme", "dark");
+				themeToggle.textContent = 'Switch to Light Theme';
+			}
+		});
+		
+    </script>
+</body>
+</html>

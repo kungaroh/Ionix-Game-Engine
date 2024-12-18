@@ -1,0 +1,92 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "Tsx",
+        ".",
+        "Tmx"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Assets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Background.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "GameEngineTileMap.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 250.33333333333331,
+                "y": 405
+            }
+        },
+        "PlayerSheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tmx/Assets.tsx": {
+            "scaleInDock": 1
+        },
+        "Tmx/Background.tsx": {
+            "scaleInDock": 1
+        },
+        "Tmx/GameEngineTileMap.tmx": {
+            "scale": 4.1146875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 239.99392420445054,
+                "y": 160.0364547732969
+            }
+        },
+        "Tmx/PlayerSheet.tsx": {
+            "scaleInDock": 1
+        },
+        "Tsx/Assets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tsx/Background.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tsx/PlayerSheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.executablePath": "F:/University/Year_3/GameEngines/Tiled-2024.10.31_Windows-10+_x86_64.zip/tiled.exe",
+    "last.exportedFilePath": "D:/GETileProjectNew/Lua",
+    "last.imagePath": "F:/University/Year_3/GameEngines/GameEngines24-25/GameEngineTileMap",
+    "last.workingDirectory": "F:/University/Year_3/GameEngines/GameEngines24-25/GameEngineTileMap",
+    "lastUsedTilesetExportFilter": "Lua files (*.lua)",
+    "map.lastUsedExportFilter": "Lua files (*.lua)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+    ],
+    "project": "GETileProjectNew.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "Tsx/Assets.tsx",
+        "Tsx/Background.tsx",
+        "Tsx/PlayerSheet.tsx",
+        "Tmx/GameEngineTileMap.tmx",
+        "PlayerSheet.tsx",
+        "Background.tsx",
+        "Assets.tsx",
+        "GameEngineTileMap.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    }
+}
